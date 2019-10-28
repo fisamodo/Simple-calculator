@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script>
+            function prikazBroja(vrijednost)
+            {
+               document.getElementById("glavniIspis").value +=vrijednost 
+            }
+            
+            function izracunaj()
+            {
+                var x = document.getElementById("glavniIspis").value
+                var y = eval(x)
+            document.getElementById("glavniIspis").value = y
+            }
+            function izbrisi()
+            {
+                document.getElementById("glavniIspis").value=""
+            }
+        
+        
+        </script>
+        
+        <style>
+            
+            input[type="button"] {
+                background-color:lightblue;
+                color:black;
+                width:100%
+            }
+            
+        </style>
+    </head>    
+    <body>
+ <table border="1" align="center" bgcolor = "orange" ><tr><td colspan="4">
+     <div align ="center"> Kalkulator</div></td>
+     </tr>
+        <tr><td colspan="3"><input type ="text"  id ="glavniIspis"/></td>
+            <td><input type ="button" value = "c" onClick="izbrisi()"/></td></tr>
+        <tr>
+        <td><input type="button" value="7" onclick="prikazBroja(7)"/></td>
+        <td><input type="button" value="8" onclick="prikazBroja(8)"/></td>
+        <td><input type="button" value="9" onclick="prikazBroja(9)"/></td>
+        <td><input type="button" value="/" onclick="prikazBroja('/')"></td>
+        </tr>
+        <tr>
+        <td><input type="button" value="4" onclick="prikazBroja(4)"/></td>
+        <td><input type="button" value="5" onclick="prikazBroja(5)"/></td>
+        <td><input type="button" value="6" onclick="prikazBroja(6)"/></td>
+        <td><input type="button" value="*" onclick="prikazBroja('*')"></td>
+        </tr>
+        <tr>
+        <td><input type="button" value="1" onclick="prikazBroja(1)"/></td>
+        <td><input type="button" value="2" onclick="prikazBroja(2)"/></td>
+        <td><input type="button" value="3" onclick="prikazBroja(3)"/></td>
+        <td><input type="button" value="-" onclick="prikazBroja('-')"></td>
+        </tr>
+        <tr>
+        <td><input type="button" value="." onclick="prikazBroja('.')"/></td>
+        <td><input type="button" value="0" onclick="prikazBroja(0)"/></td>
+        <td><input type="button" value="=" onclick="izracunaj()"/></td>
+        <td><input type="button" value="+" onclick="prikazBroja('+')"></td>
+        </tr>
+</table>
+</body>    
+</html>
